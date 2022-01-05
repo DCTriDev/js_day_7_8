@@ -196,7 +196,6 @@ function CountInt(arr) {
 //BT10 So sánh số lượng số dương và số âm
 btnCompare.addEventListener('click', function () {
     resultCompareEl.innerHTML=Compare(numberArr)
-    console.log(numberArr)
 })
 function Compare(arr) {
     let positiveNum =0
