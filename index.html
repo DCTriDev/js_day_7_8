@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link rel="shortcut icon" href="#">
+    <!--    Bootstrap    -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>BT JS</title>
+</head>
+<body class="text-center p-5 bg-light container">
+    <div class="text-primary mb-5">
+        <h1>Bài Tập JS - Buổi 7 - 8</h1>
+    </div>
+    <div class="border border-primary rounded py-3 my-3">
+        <div class="container px-5">
+            <h2 class="text-danger">Nhập số nguyên và lưu trữ mảng</h2>
+            <h3 class="text-success">Nhập số nguyên</h3>
+            <p>Nhập số nguyên</p>
+            <input id="number-input" placeholder="Thêm số" type="text"><br><br>
+            <button class="btn btn-primary" id="btn-add-number">Thêm Số</button>
+            <br><br>
+            <!--    BT1     -->
+            <div class="border border-success py-3 my-5">
+                <h3 class="text-success">Tổng các số dương</h3>
+                <button class="btn btn-primary" id="btn-sum-positive">Kiểm tra</button>
+                <br><br>
+                <h5>Tổng số dương là : <span id="result-sum-positive"></span></h5>
+            </div>
+            <!--    BT2     -->
+            <div class="border border-success py-3 my-5">
+                <h3 class="text-success">Số lượng số dương</h3>
+                <button class="btn btn-primary" id="btn-count-positive">Kiểm tra</button>
+                <br><br>
+                <h5>Số lượng số dương là : <span id="result-count-positive"></span></h5>
+            </div>
+            <!--    BT3     -->
+            <div class="border border-success py-3 my-5">
+                <h3 class="text-success">Số nhỏ nhất</h3>
+                <button class="btn btn-primary" id="btn-min-number">Kiểm tra</button>
+                <br><br>
+                <h5>Số nhỏ nhất là: <span id="result-min-number"></span></h5>
+            </div>
+            <!--    BT4     -->
+            <div class="border border-success py-3 my-5">
+                <h3 class="text-success">Số dương nhỏ nhất</h3>
+                <button class="btn btn-primary" id="btn-min-positive">Kiểm tra</button>
+                <br><br>
+                <h5>Số dương nhỏ nhất là: <span id="result-min-positive"></span></h5>
+            </div>
+            <!--    BT5     -->
+            <div class="border border-success py-3 my-5">
+                <h3 class="text-success">Số chẵn cuối cùng</h3>
+                <button class="btn btn-primary" id="btn-last-even">Kiểm tra</button>
+                <br><br>
+                <h5 id="result-last-even"></h5>
+            </div>
+            <!--    BT6     -->
+            <div class="border border-success py-3 my-5">
+                <h3 class="text-success">Đổi chỗ 2 giá trị trong mảng</h3>
+                <h4>Nhập vị trí 2 phần tử muốn đổi</h4>
+                <input id="first-index" placeholder="Thêm số" type="text">
+                <input id="second-index" placeholder="Thêm số" type="text">
+                <br><br>
+                <button class="btn btn-primary" id="btn-change-value">Kiểm tra</button>
+                <br><br>
+                <h5 id="result-change-value"></h5>
+            </div>
+            <!--    BT7     -->
+            <div class="border border-success py-3 my-5">
+                <h3 class="text-success">Sắp xếp mảng theo thứ tự tăng dần</h3>
+                <button class="btn btn-primary" id="btn-sort">Kiểm tra</button>
+                <br><br>
+                <h5 id="result-sort"></h5>
+            </div>
+            <!--    BT8     -->
+            <div class="border border-success py-3 my-5">
+                <h3 class="text-success">Tìm số nguyên tố đầu tiên</h3>
+                <button class="btn btn-primary" id="btn-first-prime">Kiểm tra</button>
+                <br><br>
+                <h5 id="result-first-prime"></h5>
+            </div>
+            <!--    BT9     -->
+            <div class="border border-success py-3 my-5">
+                <h2 class="text-danger">Thêm mảng số thực và đếm số nguyên trong mảng</h2>
+                <h4 class="text-success">Nhập số thực</h4>
+                <input id="real-number-input" placeholder="Thêm số" type="text"><br><br>
+                <button class="btn btn-primary" id="btn-add-real-number">Thêm Số</button>
+                <br><br>
+                <h4 class="text-success">Đếm số nguyên</h4>
+                <button class="btn btn-primary" id="btn-count-int">Kiểm tra</button>
+                <br><br>
+                <h5 id="result-count-int"></h5>
+            </div>
+            <!--    BT10     -->
+            <div class="border border-success py-3 my-5">
+                <h3 class="text-success">So sánh số lượng số dương và số âm</h3>
+                <button class="btn btn-primary" id="btn-compare">Kiểm tra</button>
+                <br><br>
+                <h5 id="result-compare"></h5>
+            </div>
+        </div>
+    </div>
+
+
+    <!--    Bài Tập 2    -->
+
+
+    <!--    =============================Javascript=======================    -->
+    <!--    jQuery    -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!--    Boostrap    -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--    Custom script    -->
+    <script src="js/script.js"></script>
+</body>
+</html>
