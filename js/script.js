@@ -104,7 +104,9 @@ function MinPositive(arr) {
         if (arr[i] > 0 && (min == undefined || arr[i] < min))
             min = arr[i]
     }
-    return min
+    if (min != undefined)
+        return "Số dương nhỏ nhất là: " + min
+    else return 'Không có số dương chẵn trong mảng'
 }
 
 //BT5 Tìm số chẵn cuối cùng
@@ -124,13 +126,12 @@ function LastEven(arr) {
 
 btnChangeValue.addEventListener('click', function () {
     let changeValueArr = [...numberArr]
-    let firstIndex = firstIndexEl.value - 1
-    let secondIndex = secondIndexEl.value - 1
-    resultChangeValueEl.innerHTML = ChangeValue(firstIndex, secondIndex, changeValueArr, numberArr)
-
+    let firstIndex = firstIndexEl.value
+    let secondIndex = secondIndexEl.value
+    resultChangeValueEl.innerHTML = 'Mảng trước khi đổi là: ' + numberArr.join(', ') + '<br>' + 'Mảng đã đổi là ' + ChangeValue(firstIndex, secondIndex, changeValueArr).join(', ')
 })
 
-function ChangeValue(firstIndex, secondIndex, changeArr, numArr) {
+function ChangeValue(firstIndex, secondIndex, changeArr) {
     //Cách 1
     // let temp = changeArr[firstIndex]
     // changeArr[firstIndex]=changeArr[secondIndex]
@@ -138,13 +139,13 @@ function ChangeValue(firstIndex, secondIndex, changeArr, numArr) {
 
     //Cách 2
     [changeArr[firstIndex], changeArr[secondIndex]] = [changeArr[secondIndex], changeArr[firstIndex]]
-    return 'Mảng trước khi đổi là: ' + numArr + '<br>' + 'Mảng đã đổi là ' + changeArr
+    return changeArr
 }
 
 //BT7 Sắp xếp mảng
 btnSort.addEventListener('click', function () {
     let sortArr = [...numberArr]
-    resultSortEl.innerHTML = 'Mảng trước khi sắp xếp là: ' + numberArr + '<br>' + "Mảng đã sắp xếp là: " + sortArr.sort((a, b) => a - b)
+    resultSortEl.innerHTML = 'Mảng trước khi sắp xếp là: ' + numberArr.join(', ') + '<br>' + "Mảng đã sắp xếp là: " + sortArr.sort((a, b) => a - b).join(', ')
 })
 
 //BT8 Tìm số nguyên số đầu tiên
@@ -175,13 +176,14 @@ function isPrime(num) {
 }
 
 //BT9 Nhập thêm một mảng số thực, tìm số lượng số nguyên.
+//Thêm số thực
 btnAddRealNumber.addEventListener('click', function () {
     let realNumberInput = realNumberInputEl.value * 1
     AddNumber(realNumberInput, realNumberInputEl)
 })
-
+//Đếm số lượng số nguyên
 btnCountInt.addEventListener('click', function () {
-    resultCountIntEl.innerHTML = CountInt(numberArr)
+    resultCountIntEl.innerHTML = "Số lượng số nguyên là: " + CountInt(numberArr)
 })
 
 function CountInt(arr) {
@@ -190,26 +192,27 @@ function CountInt(arr) {
         if (arr[i] == Math.floor(arr[i]))
             countInt++
     }
-    return "Số lượng số nguyên là: " + countInt
+    return countInt
 }
 
 //BT10 So sánh số lượng số dương và số âm
 btnCompare.addEventListener('click', function () {
-    resultCompareEl.innerHTML=Compare(numberArr)
+    resultCompareEl.innerHTML = Compare(numberArr)
 })
+
 function Compare(arr) {
-    let positiveNum =0
-    let negativeNum =0
-    for (let i = 0; i <arr.length ; i++) {
-        if(arr[i]>0){
+    let positiveNum = 0
+    let negativeNum = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
             positiveNum++
-        }else if(arr[i]<0){
+        } else if (arr[i] < 0) {
             negativeNum++
         }
     }
-    if(positiveNum>negativeNum)
+    if (positiveNum > negativeNum)
         return "Số lượng số dương nhiều hơn"
-    else if(negativeNum>positiveNum)
+    else if (negativeNum > positiveNum)
         return "Số lượng số âm nhiều hơn"
     else return "Số lượng số dương và số âm bằng nhau"
 }
